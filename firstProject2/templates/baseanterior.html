@@ -1,0 +1,17 @@
+<!-- esto es un html-->
+<!--Django template language-->
+<!--filtro upper pone en  mayusculas-->
+<!--filtro default para no poner nada-->
+<!--filtro 'length' nos pone la longitud-->
+<!--filtro 'truncatechars' nos trunca el valor a donde le indiquemos-->
+<!--filtro -->
+
+<div>
+    <h1>
+         Bienvenido Koder {{nombre|upper|default:"Sin apellido"}}
+        
+         Mi apellido {{apellido}} tiene {{apellido|length}}
+ 
+         Mi apellido es {{apellido|truncatechars:3}}
+    </h1> 
+ </div>    

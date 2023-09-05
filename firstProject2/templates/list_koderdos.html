@@ -1,0 +1,16 @@
+<div style="border: 1px solid green">
+
+    {%for koder in koders %}
+        <p> nombre:{{koder.name}} </p>
+        <p> apellido:{{koder.last_name}} </p>
+        <p> generacion:{{koder.generation}} </p>
+    <!-- Tag del IF -->
+    {% if koder.is_active %}
+      <p style="color: green"> Esta activo: {{ koder.is_active }}<p>
+    {% else %}
+      <p style="color: red"> Esta activo: {{ koder.is_active }}<p>
+    {% endif %}
+  {% endfor %}
+  <!-- Aqui fuera es afuera del for -->
+</div>
+

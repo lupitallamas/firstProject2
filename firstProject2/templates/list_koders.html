@@ -1,0 +1,17 @@
+<!--este es el template hijo que hereda de base.html-->
+
+{ % extends 'templates/base.html % }
+
+    {% block title %}
+    <!--esto es del hijo -->
+      <h2> Esto es el titulo el hijo </h2>
+    {% endblock %}
+    {%block content%}
+      {% for koder in koders %}
+        <span> {{koder.name}}
+        <span> {{koder.last_name}}
+        <span> {{koder.generation}}  
+      {% endfor%}  
+    {% endblock%}
+</div>
+
