@@ -1,0 +1,17 @@
+
+<!--este es el template hijo que hereda de base.html-->
+ { % extends 'base.html % }
+
+    {% block title %}
+    <!--esto es del hijo -->
+      <h2> Lista de Psicologos </h2>
+    {% endblock %}
+    {%block content%}
+      {% for psychologist in psychologists %}
+        <span> {{psychologist.first_name}}
+        <span> {{psychologist.last_name}}
+        <span> {{psychologist.birthdate}}
+        <span> {{psychologist.email}}  
+        <span> {{psychologist.phone}}          
+      {% endfor%}  
+    {% endblock%}

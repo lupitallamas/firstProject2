@@ -61,7 +61,7 @@ class Koder(models.Model):
     #Representar como nos regresan al Koder.
     
     def __str__(self):
-        return f"firstName -> {self.first_name}, lastName -> {self.last_name}"
+        return f"firstName -> {self.first_name}, lastName -> {self.last_name} {self.generation.number}"
     
 
 # 
@@ -75,7 +75,7 @@ class Mentor(models.Model):
     phone = models.CharField(max_length=25)
     created_at = models.DateTimeField(auto_now_add = True) # -->en cuanto se cree nos agrega la hora por automatico.
     # Foreign Keys
-    generations = models.ManyToManyField(Generation, related_name = "mentors")
+    generations= models.ManyToManyField(Generation, related_name = "mentors")
 
     def __str__(self):
         return f"id: {self.pk}  {self.first_name} {self.last_name}"

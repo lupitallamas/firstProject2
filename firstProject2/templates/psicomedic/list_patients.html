@@ -1,0 +1,17 @@
+{ % extends 'base.html % }
+
+{% block title %}
+<!--esto es del hijo -->
+  <h2> Lista de Pacientes </h2>
+{% endblock %}
+{%block content%}
+  {% for patient in patients %}
+    <span> {{patient.first_name}}
+    <span> {{patient.last_name}}
+    <span> {{patient.birthdate}}
+    <span> {{patient.email}}  
+    <span> {{patient.phone}}
+    <span> {{patient.biography}}
+    <span> {{patient.address_id}}             
+  {% endfor%}  
+{% endblock%}

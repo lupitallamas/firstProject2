@@ -1,0 +1,15 @@
+{% block title %}
+<!--esto es del hijo -->
+  <h2>  Citas </h2>
+{% endblock %}
+{%block content%}
+  {% for appointment in appointments %}
+    <li> {{appointment.appointment_date}}
+    <span> "Paciente:" {{appointment.patient_id}}
+    <span> {{appointment.patient.first_name}}
+    <span> {{appointment.patient.last_name}}  
+    <span> "Psicologo:"{{appointment.phychologist_id}}
+    <span> {{appointment.pychologist.first_name}}
+    <span> {{appointment.pychologist.last_name}}  
+  {% endfor%}  
+{% endblock%}

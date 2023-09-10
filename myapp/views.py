@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
-from django.shortcuts import render
+
 #Importar HHTTP response
 from  django.http import HttpResponse
 from django.template import  loader

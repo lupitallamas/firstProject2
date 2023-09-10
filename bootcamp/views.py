@@ -33,16 +33,20 @@ def list_koders(request):
     return HttpResponse(koders)
 
 def list_Koders_ant(request):
-    context={
-        "bootcamp": {"name": "Python", "module":"Django"},
-        "koders" : [
-                {"name": "Miren","last_name":"Llamas","generation":"1g","is_active":True},
-                {"name": "Fernando","last_name":"Fernandez","generation":"1g","is_active":True},
-                {"name": "Rodrigo","last_name":"Rodriguez","generation":"1g","is_active":False},
-        ],
-    }
-    template =loader.get_template("templates/list_Koders.html")
-     #return HttResponse(koders) 
+    koders = Koder.objects.all()
+    
+        #context={
+        #"bootcamp": {"name": "Python", "module":"Django"},
+        #"koders" : [
+        #        {"name": "Miren","last_name":"Llamas","generation":"1g","is_active":True},
+        #       {"name": "Fernando","last_name":"Fernandez","generation":"1g","is_active":True},
+        #       {"name": "Rodrigo","last_name":"Rodriguez","generation":"1g","is_active":False},
+        #],
+    
+    context ={"Koder": koders}
+    template =loader.get_template("templates/list_koders.html")
+    
+    #return HttResponse(koder) 
     return HttpResponse(template.render(context,request))
       
 def list_mentors(request):

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     # Custom app
     "myapp",
     "bootcamp",
+    "psicomedic",
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -60,7 +61,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
                  #os.path.join(BASE_DIR, "myApp", "templates")],
-                 os.path.join(BASE_DIR)],
+                 os.path.join(BASE_DIR,"firstProject2")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -1,3 +1,12 @@
+
+{ % extends 'templates/base.html % } {% block title %}
+
+<!--esto es del hijo -->
+  <h2> Lista de koders si estan activos con color</h2>
+{% endblock %}
+
+
+
 <div style="border: 1px solid green">
 
     {%for koder in koders %}
@@ -13,4 +22,3 @@
   {% endfor %}
   <!-- Aqui fuera es afuera del for -->
 </div>
-
